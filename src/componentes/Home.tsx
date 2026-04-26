@@ -1,7 +1,6 @@
 import Navbar from "../componentes/Navbar";
 import Hero from "../componentes/Hero";
 import About from "../componentes/About";
-import Experiences from "../componentes/Experiences";
 import WhatsappChat from "./WhatsappChat";
 import Background from "../componentes/Background";
 
