@@ -1,0 +1,53 @@
+.custom-navbar {
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  padding: 1.2rem 2.5rem;
+  min-height: 85px;
+  background: transparent;
+}
+
+/* logo */
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* links */
+.custom-navbar .nav-link {
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  transition: color 0.2s ease;
+}
+
+/* activo */
+.custom-navbar .nav-link.active {
+  color: #facc15 !important;
+}
+
+/* hover */
+.custom-navbar .nav-link:hover {
+  color: #facc15;
+}
+
+/* separación */
+.navbar-nav {
+  gap: 0.4rem;
+}
+
+/* modo oscuro base */
+.custom-navbar.dark {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar.dark .nav-link {
+  color: white;
+}
+
+/* scroll */
+.custom-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}

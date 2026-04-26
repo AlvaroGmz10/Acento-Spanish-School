@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: 0.8s;
+}
+
+.content.left {
+  transform: translateX(-80px);
+}
+
+.content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn-primary {
+  background: #facc15;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+}

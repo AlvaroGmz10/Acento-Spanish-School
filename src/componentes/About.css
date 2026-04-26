@@ -1,0 +1,61 @@
+.about {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.about-wrapper {
+  max-width: 750px;
+}
+
+.about-eyebrow {
+  color: #ffc107;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 15px 0 25px;
+}
+
+.about-lead {
+  font-size: 20px;
+  opacity: 0.95;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  opacity: 0.8;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.about-highlights div {
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-highlights div::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ffc107;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
+}
