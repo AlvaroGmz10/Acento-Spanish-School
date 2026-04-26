@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./WhatsAppChat.css";
+import "./WhatsappChat.css";
 
 const PHONE = "573218948720";
 
