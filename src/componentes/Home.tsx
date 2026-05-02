@@ -3,6 +3,7 @@ import Hero from "../componentes/Hero";
 import About from "../componentes/About";
 import WhatsappChat from "./WhatsappChat";
 import Background from "../componentes/Background";
+import Methodology from "./Methodology";
 
 import { useState } from "react";
 
@@ -18,6 +19,8 @@ export default function Home() {
       <Navbar theme={theme} />
 
       <Hero />
+
+      <Methodology />
 
       <About />
 

@@ -7,7 +7,7 @@ export default function Navbar({ theme }: { theme: string }) {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sections = ["hero", "about", "experiences"];
+    const sections = ["hero", "about", "methodology"];
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -77,19 +77,19 @@ export default function Navbar({ theme }: { theme: string }) {
         <div className="collapse navbar-collapse" id="mainNavbar">
           <div className="navbar-nav ms-auto">
             <a
+              className={`nav-link ${active === "methodology" ? "active" : ""}`}
+              href="#methodology"
+              onClick={handleLinkClick}
+            >
+              Methodology
+            </a>
+
+            <a
               className={`nav-link ${active === "about" ? "active" : ""}`}
               href="#about"
               onClick={handleLinkClick}
             >
               About Us
-            </a>
-
-            <a
-              className={`nav-link ${active === "experiences" ? "active" : ""}`}
-              href="#experiences"
-              onClick={handleLinkClick}
-            >
-              Experiences
             </a>
           </div>
         </div>
