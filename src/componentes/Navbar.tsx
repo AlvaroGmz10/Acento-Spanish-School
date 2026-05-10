@@ -7,7 +7,7 @@ export default function Navbar({ theme }: { theme: string }) {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sections = ["hero", "about", "methodology"];
+    const sections = ["hero", "methodology", "about", "testimonios"];
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -90,6 +90,14 @@ export default function Navbar({ theme }: { theme: string }) {
               onClick={handleLinkClick}
             >
               About Us
+            </a>
+
+            <a
+              className={`nav-link ${active === "testimonios" ? "active" : ""}`}
+              href="#testimonios"
+              onClick={handleLinkClick}
+            >
+              Testimonios
             </a>
           </div>
         </div>

@@ -41,15 +41,17 @@ const Methodology = () => {
           {/* RIGHT COLLAGE */}
           <div className="methodology-images-card">
             <div className="img img-main">
-              <img src="/imagenes/Meto2.jpg" alt="Spanish class" />
+              <img src="/imagenes/Meto2.webp" alt="Spanish class" />
             </div>
-
             <div className="img img-top">
-              <img src="/imagenes/Meto3.png" alt="Students learning Spanish" />
+              <img src="/imagenes/Meto3.webp" alt="Students learning Spanish" />
             </div>
 
             <div className="img img-bottom">
-              <img src="/imagenes/Meto1.jpg" alt="Spanish immersion activity" />
+              <img
+                src="/imagenes/Meto1.webp"
+                alt="Spanish immersion activity"
+              />
             </div>
           </div>
         </div>

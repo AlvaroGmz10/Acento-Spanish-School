@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   color: white;
@@ -11,7 +11,6 @@
   content: "";
   position: absolute;
   inset: 0;
-
   z-index: 1;
 }
 
@@ -19,77 +18,101 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
-  .hero-content {
-    margin-left: clamp(20px, 6vw, 120px);
-  }
+  max-width: 100%;
+  margin-left: clamp(20px, 6vw, 120px);
+  margin-right: 20px;
+  padding-top: 80px;
 }
 
 /* badge */
 .hero-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 20px;
-  font-size: 14px;
-  margin-bottom: 18px;
+  font-size: 12px;
+  margin-bottom: 15px;
   backdrop-filter: blur(4px);
 }
 
 /* titulo */
 .hero h1 {
-  font-size: 3.4rem;
+  font-size: clamp(2rem, 8vw, 3.4rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 /* texto */
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   opacity: 0.95;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 /* botones */
 .hero-buttons {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .hero .btn-warning {
   background: #facc15;
   border: none;
   font-weight: 600;
-  padding: 12px 22px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
 }
 
 .hero .btn-outline-light {
-  padding: 12px 22px;
+  padding: 10px 20px;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    background-size: contain;
-    background-position: top center;
-    min-height: 100dvh;
-  }
-
-  .hero-title {
-    font-size: 3.2rem;
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
+@media (min-width: 640px) {
   .hero-content {
+    max-width: 600px;
+    padding-top: 100px;
+  }
+
+  .hero .btn-warning {
+    padding: 11px 22px;
+    font-size: 1rem;
+  }
+
+  .hero .btn-outline-light {
+    padding: 11px 22px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    max-width: 650px;
     padding-top: 120px;
-    padding-left: 20px;
-    padding-right: 20px;
+  }
+
+  .hero-badge {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .hero h1 {
+    margin-bottom: 18px;
+  }
+
+  .hero p {
+    margin-bottom: 28px;
+  }
+
+  .hero .btn-warning {
+    padding: 12px 22px;
+  }
+
+  .hero .btn-outline-light {
+    padding: 12px 22px;
   }
 }

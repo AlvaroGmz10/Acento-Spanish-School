@@ -26,7 +26,9 @@ export default function WhatsAppChat() {
     >
       {/* HEADER */}
       <div className="wa-header">
-        <div className="wa-avatar">💬</div>
+        <div className="wa-avatar">
+          <i className="bi bi-whatsapp"></i>
+        </div>
         <div>
           <strong>WhatsApp</strong>
           <span>Respuestas rápidas</span>

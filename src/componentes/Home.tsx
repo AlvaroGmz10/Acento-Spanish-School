@@ -1,9 +1,10 @@
 import Navbar from "../componentes/Navbar";
 import Hero from "../componentes/Hero";
-import About from "../componentes/About";
+//import About from "../componentes/About";//
 import WhatsappChat from "./WhatsappChat";
 import Background from "../componentes/Background";
 import Methodology from "./Methodology";
+import Testimonios from "./Testimonios";
 
 import { useState } from "react";
 
@@ -22,7 +23,7 @@ export default function Home() {
 
       <Methodology />
 
-      <About />
+      <Testimonios />
 
       <WhatsappChat />
     </>

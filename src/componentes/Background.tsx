@@ -5,13 +5,13 @@ const sections = [
   {
     id: "hero",
     desktopImage: "/imagenes/Hero.webp",
-    mobileImage: "/imagenes/HeroMobile.png",
+    mobileImage: "/imagenes/HeroMobile.webp",
     theme: "dark",
   },
   {
     id: "methodology",
-    desktopImage: "/imagenes/Fondo.png",
-    mobileImage: "/imagenes/FondoMobile.png",
+    desktopImage: "/imagenes/Fondo.webp",
+    mobileImage: "/imagenes/FondoMobile.webp",
     theme: "dark",
   },
 ];
