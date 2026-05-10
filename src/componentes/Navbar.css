@@ -51,3 +51,19 @@
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* hamburger button */
+.custom-navbar .navbar-toggler {
+  border: 2px solid white !important;
+  padding: 0.5rem 0.75rem;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 9h18M6 15h18M6 21h18'/%3e%3c/svg%3e") !important;
+  background-size: contain !important;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

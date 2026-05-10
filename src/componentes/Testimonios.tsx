@@ -4,6 +4,7 @@ const testimonios = [
   {
     type: "video",
     src: "/videos/Gaby Trumble.mp4",
+    poster: "/imagenes/Gaby Trumble preview.webp",
     quote: "¡Una experiencia increíble aprendiendo español en Cartagena!",
     author: "Gaby Trumble",
   },
@@ -20,6 +21,7 @@ const testimonios = [
   {
     type: "video",
     src: "/videos/Karin Hangarment.mp4",
+    poster: "/imagenes/Hero.webp",
     quote:
       "Clases cortas, precisas y con mucha práctica real. Ideal si quieres avanzar rápido.",
     author: "Karin Hangarment",
@@ -69,7 +71,7 @@ export default function Testimonios() {
               <div key={index} className="testimonio-card">
                 {testimonio.type === "video" && (
                   <div className="testimonio-media">
-                    <video controls>
+                    <video controls poster={testimonio.poster}>
                       <source src={testimonio.src} type="video/mp4" />
                       Tu navegador no soporta el elemento de video.
                     </video>

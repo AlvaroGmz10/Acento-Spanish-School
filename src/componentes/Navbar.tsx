@@ -97,7 +97,7 @@ export default function Navbar({ theme }: { theme: string }) {
               href="#testimonios"
               onClick={handleLinkClick}
             >
-              Testimonios
+              Testimonials
             </a>
           </div>
         </div>
