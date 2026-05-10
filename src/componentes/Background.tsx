@@ -14,6 +14,12 @@ const sections = [
     mobileImage: "/imagenes/FondoMobile.webp",
     theme: "dark",
   },
+  {
+    id: "testimonios",
+    desktopImage: null, // No background image for testimonials
+    mobileImage: null,
+    theme: "light",
+  },
 ];
 
 export default function Background({ setTheme }: any) {
@@ -90,14 +96,14 @@ export default function Background({ setTheme }: any) {
       <div
         className="bg-layer current"
         style={{
-          backgroundImage: `url(${current.image})`,
+          backgroundImage: current.image ? `url(${current.image})` : 'none',
         }}
       />
 
       <div
         className={`bg-layer next ${animate ? "slide" : ""}`}
         style={{
-          backgroundImage: `url(${next.image})`,
+          backgroundImage: next.image ? `url(${next.image})` : 'none',
         }}
       />
     </div>
