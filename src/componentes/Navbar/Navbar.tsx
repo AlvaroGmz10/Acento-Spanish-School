@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface NavbarProps {
   theme?: string;
@@ -11,21 +11,42 @@ export default function Navbar({
   activeSection = "",
 }: NavbarProps) {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const safeTheme = theme || "dark";
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-
-    if (el) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+  const currentSection = activeSection || "";
 
   const logo = safeTheme === "light" ? "/LogoBlack.webp" : "/Logo.webp";
+
+  const scrollToSection = (id: string) => {
+    // Si NO estamos en home, primero navegamos y luego hacemos scroll
+    if (location.pathname !== "/") {
+      navigate("/");
+
+      setTimeout(() => {
+        const el = document.getElementById(id);
+
+        el?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 300);
+
+      return;
+    }
+
+    // Si ya estamos en home, scroll directo
+    const el = document.getElementById(id);
+
+    el?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const goToPricing = () => {
+    navigate("/pricing");
+  };
 
   return (
     <nav
@@ -65,7 +86,7 @@ export default function Navbar({
             {/* METHODOLOGY */}
             <button
               className={`nav-link ${
-                activeSection === "methodology" ? "active" : ""
+                currentSection === "methodology" ? "active" : ""
               }`}
               onClick={() => scrollToSection("methodology")}
             >
@@ -75,9 +96,9 @@ export default function Navbar({
             {/* TESTIMONIALS */}
             <button
               className={`nav-link ${
-                activeSection === "testimonials" ? "active" : ""
+                currentSection === "testimonios" ? "active" : ""
               }`}
-              onClick={() => scrollToSection("testimonials")}
+              onClick={() => scrollToSection("testimonios")}
             >
               Testimonials
             </button>
@@ -87,7 +108,7 @@ export default function Navbar({
               className={`nav-link ${
                 location.pathname === "/pricing" ? "active" : ""
               }`}
-              onClick={() => (window.location.href = "/pricing")}
+              onClick={goToPricing}
             >
               Pricing
             </button>
