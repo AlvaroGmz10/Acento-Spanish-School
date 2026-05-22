@@ -16,7 +16,7 @@ const testimonios = [
     author: "David Cueto",
     rating: 5,
     googleUrl:
-      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews",
+      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews&lrd=0x8ef62f7162bdb0b1:0x4d380e46cf3db1ed,1,,,,",
   },
   {
     type: "video",
@@ -33,7 +33,7 @@ const testimonios = [
     author: "Izzy Considine",
     rating: 5,
     googleUrl:
-      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews",
+      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews&lrd=0x8ef62f7162bdb0b1:0x4d380e46cf3db1ed,1,,,,",
   },
   {
     type: "image",
@@ -49,7 +49,7 @@ const testimonios = [
     author: "Vincent Gallaguer-Duguay",
     rating: 5,
     googleUrl:
-      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews",
+      "https://www.google.com/search?q=Acento+Spanish+School+Cartagena#mpd=~16546020079512263596/customers/reviews&lrd=0x8ef62f7162bdb0b1:0x4d380e46cf3db1ed,1,,,,",
   },
 ];
 
