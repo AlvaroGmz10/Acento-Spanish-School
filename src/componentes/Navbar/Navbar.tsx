@@ -1,16 +1,21 @@
 import "./Navbar.css";
-
 import { useLocation } from "react-router-dom";
 
 interface NavbarProps {
   theme: string;
-  activeSection: string;
+  activeSection?: string;
 }
 
 export default function Navbar({ theme, activeSection }: NavbarProps) {
   const location = useLocation();
 
   const isHome = location.pathname === "/";
+
+  // Normalizamos por seguridad
+  const currentSection = activeSection ?? "";
+
+  // LOGO DINÁMICO (recupera lógica perdida)
+  const logo = theme === "light" ? "/LogoBlack.webp" : "/Logo.webp";
 
   return (
     <nav
@@ -19,18 +24,16 @@ export default function Navbar({ theme, activeSection }: NavbarProps) {
         navbar-expand-lg
         fixed-top
         custom-navbar
-        ${theme}
+        ${theme || "dark"}
       `}
     >
       <div className="container-fluid">
         {/* LOGO */}
-
         <a className="navbar-brand" href={isHome ? "#hero" : "/#hero"}>
-          <img src="/Logo.webp" alt="Acento" className="navbar-logo" />
+          <img src={logo} alt="Acento" className="navbar-logo" />
         </a>
 
         {/* TOGGLER */}
-
         <button
           className="navbar-toggler"
           type="button"
@@ -44,14 +47,12 @@ export default function Navbar({ theme, activeSection }: NavbarProps) {
         </button>
 
         {/* LINKS */}
-
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav ms-auto">
             {/* METHODOLOGY */}
-
             <a
               className={`nav-link ${
-                activeSection === "methodology" ? "active" : ""
+                currentSection === "methodology" ? "active" : ""
               }`}
               href={isHome ? "#methodology" : "/#methodology"}
             >
@@ -59,18 +60,16 @@ export default function Navbar({ theme, activeSection }: NavbarProps) {
             </a>
 
             {/* TESTIMONIALS */}
-
             <a
               className={`nav-link ${
-                activeSection === "testimonios" ? "active" : ""
+                currentSection === "testimonials" ? "active" : ""
               }`}
-              href={isHome ? "#testimonios" : "/#testimonios"}
+              href={isHome ? "#testimonials" : "/#testimonials"}
             >
               Testimonials
             </a>
 
             {/* PRICING */}
-
             <a
               className={`nav-link ${
                 location.pathname === "/pricing" ? "active" : ""
