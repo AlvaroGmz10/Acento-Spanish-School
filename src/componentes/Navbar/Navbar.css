@@ -67,3 +67,16 @@
   outline: none !important;
   box-shadow: none !important;
 }
+
+.navbar-brand {
+  background: none;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}

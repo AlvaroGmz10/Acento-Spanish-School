@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 ## Agregar Testimonios
 
-Los testimonios se encuentran en `src/componentes/Testimonios.tsx` en el array `testimonios`. Puedes agregar nuevos testimonios fácilmente:
+Los testimonios se encuentran en `src/componentes/Testimonios/Testimonios.tsx` en el array `testimonios`. Puedes agregar nuevos testimonios fácilmente:
 
 ```javascript
 {

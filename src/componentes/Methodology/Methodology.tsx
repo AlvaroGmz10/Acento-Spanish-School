@@ -4,6 +4,16 @@ const Methodology = () => {
   return (
     <section id="methodology" className="methodology-section">
       <div className="container">
+        {/* QUOTE IN CORNER */}
+        <div className="methodology-quote">
+          <blockquote>
+            "For last year's words belong to last year's language
+            <br />
+            And next year's words await another voice."
+            <cite>— T.S. Eliot, Four Quartets</cite>
+          </blockquote>
+        </div>
+
         <div className="methodology-wrapper">
           {/* LEFT CONTENT */}
           <div className="methodology-content">
