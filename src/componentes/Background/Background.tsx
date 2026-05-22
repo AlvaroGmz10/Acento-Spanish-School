@@ -21,7 +21,7 @@ const sections = [
     id: "testimonios",
     desktopImage: null,
     mobileImage: null,
-    theme: "light",
+    theme: "dark",
   },
 ];
 

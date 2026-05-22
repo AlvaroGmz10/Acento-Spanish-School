@@ -2,20 +2,30 @@ import "./Navbar.css";
 import { useLocation } from "react-router-dom";
 
 interface NavbarProps {
-  theme: string;
+  theme?: string;
   activeSection?: string;
 }
 
-export default function Navbar({ theme, activeSection }: NavbarProps) {
+export default function Navbar({
+  theme = "dark",
+  activeSection = "",
+}: NavbarProps) {
   const location = useLocation();
 
-  const isHome = location.pathname === "/";
+  const safeTheme = theme || "dark";
 
-  // Normalizamos por seguridad
-  const currentSection = activeSection ?? "";
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
 
-  // LOGO DINÁMICO (recupera lógica perdida)
-  const logo = theme === "light" ? "/LogoBlack.webp" : "/Logo.webp";
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const logo = safeTheme === "light" ? "/LogoBlack.webp" : "/Logo.webp";
 
   return (
     <nav
@@ -24,14 +34,17 @@ export default function Navbar({ theme, activeSection }: NavbarProps) {
         navbar-expand-lg
         fixed-top
         custom-navbar
-        ${theme || "dark"}
+        ${safeTheme}
       `}
     >
       <div className="container-fluid">
         {/* LOGO */}
-        <a className="navbar-brand" href={isHome ? "#hero" : "/#hero"}>
+        <button
+          className="navbar-brand btn-reset"
+          onClick={() => scrollToSection("hero")}
+        >
           <img src={logo} alt="Acento" className="navbar-logo" />
-        </a>
+        </button>
 
         {/* TOGGLER */}
         <button
@@ -50,34 +63,34 @@ export default function Navbar({ theme, activeSection }: NavbarProps) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav ms-auto">
             {/* METHODOLOGY */}
-            <a
+            <button
               className={`nav-link ${
-                currentSection === "methodology" ? "active" : ""
+                activeSection === "methodology" ? "active" : ""
               }`}
-              href={isHome ? "#methodology" : "/#methodology"}
+              onClick={() => scrollToSection("methodology")}
             >
               Methodology
-            </a>
+            </button>
 
             {/* TESTIMONIALS */}
-            <a
+            <button
               className={`nav-link ${
-                currentSection === "testimonials" ? "active" : ""
+                activeSection === "testimonials" ? "active" : ""
               }`}
-              href={isHome ? "#testimonials" : "/#testimonials"}
+              onClick={() => scrollToSection("testimonials")}
             >
               Testimonials
-            </a>
+            </button>
 
             {/* PRICING */}
-            <a
+            <button
               className={`nav-link ${
                 location.pathname === "/pricing" ? "active" : ""
               }`}
-              href="/pricing"
+              onClick={() => (window.location.href = "/pricing")}
             >
               Pricing
-            </a>
+            </button>
           </div>
         </div>
       </div>
