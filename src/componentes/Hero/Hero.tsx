@@ -20,11 +20,11 @@ export default function Hero() {
 
         <div className="hero-buttons">
           <a href="#experiences" className="btn btn-warning">
-            View Experiences
+            Why Us?
           </a>
 
           <a href="#about" className="btn btn-outline-light">
-            Discover More
+            Reserve NOW
           </a>
         </div>
       </div>
