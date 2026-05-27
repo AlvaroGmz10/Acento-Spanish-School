@@ -52,11 +52,13 @@ export default async function handler(req: any, res: any) {
     return res.status(200).json({
       success: true,
     });
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    console.error("BOOKING ERROR:", error);
 
     return res.status(500).json({
       success: false,
+      error: error?.message,
+      details: error,
     });
   }
 }
