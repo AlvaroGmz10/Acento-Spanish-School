@@ -1,6 +1,9 @@
 import "./Hero.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section id="hero" className="hero">
       <div className="hero-overlay" />
@@ -22,10 +25,12 @@ export default function Hero() {
           <a href="#experiences" className="btn btn-warning">
             Why Us?
           </a>
-
-          <a href="#about" className="btn btn-outline-light">
-            Reserve NOW
-          </a>
+          <button
+            className="btn btn-outline-light"
+            onClick={() => navigate("/pricing")}
+          >
+            Reserve Now
+          </button>
         </div>
       </div>
     </section>
