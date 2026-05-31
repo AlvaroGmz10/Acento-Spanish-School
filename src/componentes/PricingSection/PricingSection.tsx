@@ -48,21 +48,21 @@ export default function PricingSection() {
             className={selected === "private" ? "active" : ""}
             onClick={() => setSelected("private")}
           >
-            Private
+            Home
           </button>
 
           <button
             className={selected === "duo" ? "active" : ""}
             onClick={() => setSelected("duo")}
           >
-            Duo
+            Co-working
           </button>
 
           <button
             className={selected === "group" ? "active" : ""}
             onClick={() => setSelected("group")}
           >
-            Group
+            Traditional
           </button>
         </div>
 
